@@ -1,3 +1,21 @@
+#Option 9 function
+def what_py(x):
+	if x == 1:
+		sys('python3')
+	elif x == 2 :
+		fn=input("Enter file name to start writing code :")
+		sys("gedit {}".format(fn))
+	elif x == 3 :
+		pth = input("Enter name of the file you want to run :")
+		sys("python3 {}".format(pth))
+	elif x == 4 :
+		nm = input ("Enter package name :")
+		sys("pip3 install {}".format(nm))
+	else :
+		print("Invalid input !!!")
+	return
+
+
 #code for banner and designs
 from os import system as sys
 import getpass
@@ -33,7 +51,7 @@ Enter 5  : to install new software or tool
 Enter 6  : to open new terminal 
 Enter 7  : to open text-editor
 Enter 8  : to update whole system
-Enter 9  : to launch python
+Enter 9  : to Python operations
 Enter 10 : to scan website using nmap
 Enter 11 : to check ip address
 Enter 12 : to ping
@@ -68,7 +86,13 @@ Enter 18 : to exit
 		elif choice==8:
 			sys("sudo apt-get update")
 		elif choice==9:
-			sys("python")
+			print('''What you wanna do : 
+1 :launch python 
+2 :Create or edit a python code 
+3 :Run your python file
+4 :Install a package''')
+			X=int(input("Enter your choice :"))
+			what_py(X)
 		elif choice==10:
 			print("Enter Website or IP : ",end="")
 			website=input()
@@ -101,3 +125,6 @@ Enter 18 : to exit
 			break
 		else :
 			print(colored("Invalid Choice","red"))
+
+
+	
